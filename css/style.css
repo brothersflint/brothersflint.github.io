@@ -10,7 +10,6 @@
  * 5.0 - Content
  *   5.0.1 Custom Content
  *   5.13 - Multisite
- * 7.0 - Footer
  * 8.0 - Media Queries
  * 9.0 - Print
  * ----------------------------------------------------------------------------
@@ -1468,11 +1467,6 @@ a.button-steam-rollover:hover {
   height: 120px;
 }
 
-.copyright {
-  padding-top: 5px;
-  font-size: 9px;
-}
-
 
 /**
  * 5.13 Multisite
@@ -1500,93 +1494,6 @@ a.button-steam-rollover:hover {
 
 .site-main .mu_register input[type="submit"] {
   width: auto;
-}
-
-
-/**
- * 7.0 Footer
- * ----------------------------------------------------------------------------
- */
-
-.site-footer {
-  background-color: rgb(22, 22, 22);
-  border-top: 1px solid #ffffff;
-  color: white;
-  font-family: OriyaMN, Helvetica, Arial, sans-serif;
-  font-size: 12px;
-  text-transform: uppercase;
-  text-align: center;
-}
-
-.site-footer .widget-area,
-.sidebar .site-footer {
-  text-align: left;
-}
-
-.site-footer a {
-  color: #686758;
-}
-
-.site-footer .sidebar-container {
-  background-color: rgb(22, 22, 22);
-  padding: 20px 0;
-}
-
-.site-footer .widget-area {
-  margin: 0 auto;
-  max-width: 1040px;
-  width: 100%;
-}
-
-.sidebar .site-footer .widget-area {
-  max-width: 724px;
-  position: relative;
-  left: -158px;
-}
-
-.site-footer .widget {
-  background: transparent;
-  color: #fff;
-  float: left;
-  margin-right: 20px;
-  width: 245px;
-}
-
-.sidebar .site-footer .widget {
-  width: 228px;
-}
-
-.sidebar .site-footer .widget:nth-of-type(4),
-.sidebar .site-footer .widget:nth-of-type(3) {
-  margin-right: 0;
-}
-
-.site-footer .widget a {
-  color: rgb(63, 105, 124);
-}
-
-.site-footer .widget a:hover {
-  color: white;
-  text-decoration: none;
-}
-
-.site-footer .widget-title,
-.site-footer .widget-title a,
-.site-footer .wp-caption-text {
-  color: #fff;
-}
-
-.site-info {
-  margin: 0 auto;
-  max-width: 1040px;
-  padding: 40px 0;
-  width: 100%;
-  letter-spacing: 0.2em;
-}
-
-#wpstats {
-  display: block;
-  margin: -10px auto 0;
 }
 
 
@@ -1630,22 +1537,6 @@ a.button-steam-rollover:hover {
     width: 100%;
   }
 
-  .archive-header,
-  .search .page-header,
-  .archive .page-header,
-  .blog .page-header,
-  .error404 .page-content,
-  .search .page-content,
-  .archive .page-content,
-  .attachment .entry-header,
-  .attachment .entry-content,
-  .post-navigation .nav-links,
-  .sidebar .site-info,
-  .site-footer .widget-area {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
   .error404 .page-title {
     font-size: 24px;
     padding: 180px;
@@ -1682,25 +1573,6 @@ a.button-steam-rollover:hover {
   .sidebar .post-navigation .nav-links,
   .author.sidebar .author-info {
     max-width: 604px;
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  .sidebar .site-info,
-  .search.sidebar .page-content,
-  .blog.sidebar .page-content,
-  .attachment .entry-header,
-  .sidebar .comments-title {
-    max-width: 604px;
-  }
-
-  .sidebar .archive-meta,
-  .attachment .entry-header,
-  .search.sidebar .page-content,
-  .blog.sidebar .page-content,
-  .sidebar .site-info,
-  .sidebar .comments-title,
-  .sidebar .no-comments {
     padding-left: 0;
     padding-right: 0;
   }
@@ -1796,26 +1668,6 @@ a.button-steam-rollover:hover {
 @media (max-width: 840px) {
   .site-title {
     font-size: 30px;
-  }
-
-  #content .entry-header,
-  #content .entry-content,
-  #content .entry-summary,
-  #content footer.entry-meta,
-  #content .featured-gallery,
-  .search.sidebar .page-content,
-  .blog.sidebar .page-content,
-  .sidebar .post-navigation .nav-links,
-  .paging-navigation .nav-links,
-  #content .author-info,
-  .comments-area .comments-title,
-  .comments-area .comment-list,
-  .comments-area .comment-navigation,
-  .comment-respond,
-  .sidebar .site-info,
-  .sidebar .paging-navigation .nav-links {
-    padding-left: 20px;
-    padding-right: 20px;
   }
 
   #content .format-status .entry-content,
