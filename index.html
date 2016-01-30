@@ -31,11 +31,13 @@
           <img src="images/home/PlatformIcons.png" />
         </div>
         <div class="primary-video">
-          <iframe id="youtubeVideo" width="800" height="450" src="https://www.youtube.com/embed/jpUUJShUtAc?rel=0" frameborder="2" allowfullscreen></iframe>
+          <iframe id="youtubeVideo" width="10" height="10" src="https://www.youtube.com/embed/jpUUJShUtAc?rel=0" frameborder="2" allowfullscreen></iframe>
           <script type="text/javascript">
-            var ytVid = document.getElementById('youtubeVideo');
-            ytVid.width = Math.min(window.innerWidth * 0.6, 800);
-            ytVid.height = ytVid.width * (9.0 / 16.0);
+            document.addEventListener("DOMContentLoaded", function(event) {
+              var ytVid = document.getElementById('youtubeVideo');
+              ytVid.width = Math.min(window.innerWidth * 0.8, 800);
+              ytVid.height = ytVid.width * (9.0 / 16.0);
+            });
           </script>
         </div>
 
