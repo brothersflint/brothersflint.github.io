@@ -5,32 +5,122 @@
 
   <template>
 
+    <style>
+      .site-header-buffer {
+        height: 70px;
+        background-color: rgb(22, 22, 22);
+      }
+
+      .site-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 10000;
+        background-color: rgb(22, 22, 22); /* TF Black */
+        border-bottom: 1px solid #ffffff;
+      }
+
+      .menu-logo {
+        position: absolute;
+        top: 25px;
+        left: 56px;
+        width: 200px;
+        height: 20px;
+        background-image: url(../images/BFLogo.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        z-index: 20000;
+      }
+
+      @media (max-width: 840px) {
+        .menu-logo {
+          left: 20px;
+        }
+      }
+
+      .main-navigation {
+        clear: both;
+        position: relative;
+      }
+
+      .nav-menu .current-menu-item > a {
+        color: white;
+        font-weight: bold;
+      }
+
+
+
+      .menu-social-buttons {
+        margin: 0;
+        padding: 0;
+        padding-left: 40px;
+        padding-right: 20px;
+        text-align: center;
+      }
+
+      @media (max-width: 880px) {
+        .menu-social-buttons {
+          padding-left: 0;
+        }
+      }
+
+      @media (max-width: 840px) {
+        .menu-social-buttons {
+          padding-top: 10px;
+          padding-bottom: 10px;
+        }
+      }
+
+      a.menu-social-button {
+        height: 30px;
+        width: 30px;
+        margin: 5px !important;
+        padding: 0 !important;
+        display: inline-block !important;
+        vertical-align: middle;
+      }
+
+      a.menu-social-button:hover {
+        background-color: rgba(0, 0, 0, 0) !important;
+      }
+
+      .social-button-fb {
+        background-image: url(../images/socials/facebookButton.png);
+      }
+
+      .social-button-twit {
+        background-image: url(../images/socials/twitterButton.png);
+      }
+
+      .social-button-yt {
+        background-image: url(../images/socials/youTubeButton.png);
+      }
+
+      a.menu-social-button:hover {
+        background-position: -30px 0;
+      }
+    </style>
+
     <div class="site-header-buffer"></div>
-    <header id="masthead" class="site-header" role="banner">
-      <!-- <a href="//brothersflint.com/" class="menu-logo"></a> -->
+    <header class="site-header">
       <a href="//tobyflint.github.io/" class="menu-logo"></a>
-      <div id="navbar" class="navbar">
-        <nav id="site-navigation" class="navigation main-navigation" style="" role="navigation">
-          <button class="menu-toggle">MENU</button>
-          <a class="screen-reader-text skip-link" href="#content" title="Skip to content">Skip to content</a>
-          <div class="menu-default-container">
-            <ul id="primary-menu" class="nav-menu">
-              <!-- <li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-5 current_page_item"><a href="//brothersflint.com/">Home</a></li> -->
-              <li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-5 current_page_item"><a href="//tobyflint.github.io/">Home</a></li>
-              <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="//blog.brothersflint.com/">Blog</a></li>
-              <!-- <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="//brothersflint.com/games/">Games</a></li> -->
-              <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="//tobyflint.github.io/games/">Games</a></li>
-              <!-- <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="//brothersflint.com/about/">About</a></li> -->
-              <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="//tobyflint.github.io/about/">About</a></li>
-              <li class="menu-social-buttons">
-                <a target="_blank" href="https://www.facebook.com/brothersflintmobileappdev" class="menu-social-button social-button-fb"></a>
-                <a target="_blank" href="https://twitter.com/BrothersFlint" class="menu-social-button social-button-twit"></a>
-                <a target="_blank" href="https://www.youtube.com/channel/UCqE1nImG1kXj7OqURME1sJg" class="menu-social-button social-button-yt"></a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </div>
+      <nav class="main-navigation">
+        <button class="menu-toggle">MENU</button>
+        <div class="menu-default-container">
+          <ul class="nav-menu">
+            <li class="current-menu-item"><a href="//tobyflint.github.io/">Home</a></li>
+            <li><a href="//blog.brothersflint.com/">Blog</a></li>
+            <li><a href="//tobyflint.github.io/games/">Games</a></li>
+            <li><a href="//tobyflint.github.io/about/">About</a></li>
+            <li class="menu-social-buttons">
+              <a target="_blank" class="menu-social-button social-button-fb" href="https://www.facebook.com/brothersflintmobileappdev"></a>
+              <a target="_blank" class="menu-social-button social-button-twit" href="https://twitter.com/BrothersFlint"></a>
+              <a target="_blank" class="menu-social-button social-button-yt" href="https://www.youtube.com/channel/UCqE1nImG1kXj7OqURME1sJg"></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
     </header>
 
   </template>
