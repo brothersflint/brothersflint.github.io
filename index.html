@@ -7,6 +7,7 @@
     <title>Brothers Flint</title>
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
     <link rel="stylesheet" href="css/style.css" />
 
     <script src="http://www.polymer-project.org/1.0/components/webcomponentsjs/webcomponents-lite.js"></script>
@@ -14,81 +15,78 @@
     <link rel="import" href="web-components/bf-footer.html">
   </head>
 
-  <body class="home page page-id-5 page-template-default single-author">
-    <div id="page" class="hfeed site">
+  <body>
+    <div class="site">
 
       <bf-navbar></bf-navbar>
 
-      <div id="main" class="site-main">
-
-        <div id="primary" class="content-area">
-          <div id="content" class="site-content home-background" role="main">
-
-            <div class="home-title">
-              <img class="home-title-splash" src="images/home/CPTSplash.png" />
-            </div>
-            <div class="home-platform-icons">
-              <img src="images/home/PlatformIcons.png" />
-            </div>
-            <div class="primary-video">
-              <iframe id="youtubeVideo" width="800" height="450" src="https://www.youtube.com/embed/jpUUJShUtAc?rel=0" frameborder="2" allowfullscreen></iframe>
-              <script type="text/javascript">
-                var ytVid = document.getElementById('youtubeVideo');
-                ytVid.width = Math.min(window.innerWidth * 0.6, 800);
-                ytVid.height = ytVid.width * (9.0 / 16.0);
-              </script>
-            </div>
-
-            <div class="steam-widget">
-              <iframe src="http://steamcommunity.com/sharedfiles/widget/556625074" width="336" height="137" frameborder="0" scrolling="no"></iframe>
-            </div>
-            <!-- <div class="download-buttons-home">
-              <a target="_blank" href="https://itunes.apple.com/nz/app/up-away/id909800185?mt=8" class="download-button button-steam button-steam-rollover"></a>
-              <a target="_blank" href="https://itunes.apple.com/nz/app/up-away/id909800185?mt=8" class="download-button button-app-store button-rollover"></a>
-              <a target="_blank" href="https://play.google.com/store/apps/details?id=com.brothersflint.upandaway" class="download-button button-play-store button-rollover"></a>
-            </div> -->
-
-            <div class="home-text">
-              <h2>
-                <img src="images/HeaderAccent.png" class="header-accent" />
-                ABOUT THE GAME
-                <img src="images/HeaderAccent.png" class="header-accent" />
-              </h2>
-              <div class="about-game">
-                Created by two brothers, <em>Coffee Pot Terrarium</em> is a turn-based game of tact and tile manipulation. Raise new pathways to traverse the map. Drop tiles to eliminate the enemies. Your skills charge each turn so you will need to tactfully decide when to activate them.
-                <br><br>
-                Each level introduces new challenges, enemies, and encounters to overcome. It's part tactical RPG, part puzzle game, with a result that is uniquely its own. Every feature of <em>Coffee Pot Terrarium</em> is being carefully designed, from the art and music to the code and gameplay. It's a true indie game, so if you like it, tell your friends about it!
-              </div>
-            </div>
-            <div class="home-text">
-              <h2>
-                <img src="images/HeaderAccent.png" class="header-accent" />
-                SCREENSHOTS
-                <img src="images/HeaderAccent.png" class="header-accent" />
-              </h2>
-              <div class="home-cptscreenshots">
-                <img src="images/home/Screenshots.png" />
-              </div>
-            </div>
-            <div class="press-kit home-text">
-              <h2>
-                <img src="images/HeaderAccent.png" class="header-accent" />
-                PRESS KIT
-                <img src="images/HeaderAccent.png" class="header-accent" />
-              </h2>
-              <div class="press-kit-text">
-                Includes trailer, screenshots, and info on <em>Coffee Pot Terrarium</em> and Brothers Flint. Coming soon.
-              </div>
-              <br>
-              <div class="press-kit-text">
-                Thanks for checking out our game! If you'd like to get in touch with us, you can reach us via email at info (at) brothersflint (dot) com or send us a message via social media.
-              </div>
-            </div>
+      <div class="site-main home-background">
 
 
 
+        <div class="home-title">
+          <img class="home-title-splash" src="images/home/CPTSplash.png" />
+        </div>
+        <div class="home-platform-icons">
+          <img src="images/home/PlatformIcons.png" />
+        </div>
+        <div class="primary-video">
+          <iframe id="youtubeVideo" width="800" height="450" src="https://www.youtube.com/embed/jpUUJShUtAc?rel=0" frameborder="2" allowfullscreen></iframe>
+          <script type="text/javascript">
+            var ytVid = document.getElementById('youtubeVideo');
+            ytVid.width = Math.min(window.innerWidth * 0.6, 800);
+            ytVid.height = ytVid.width * (9.0 / 16.0);
+          </script>
+        </div>
+
+        <div class="steam-widget">
+          <iframe src="http://steamcommunity.com/sharedfiles/widget/556625074" width="336" height="137" frameborder="0" scrolling="no"></iframe>
+        </div>
+        <!-- <div class="download-buttons-home">
+          <a target="_blank" href="https://itunes.apple.com/nz/app/up-away/id909800185?mt=8" class="download-button button-steam button-steam-rollover"></a>
+          <a target="_blank" href="https://itunes.apple.com/nz/app/up-away/id909800185?mt=8" class="download-button button-app-store button-rollover"></a>
+          <a target="_blank" href="https://play.google.com/store/apps/details?id=com.brothersflint.upandaway" class="download-button button-play-store button-rollover"></a>
+        </div> -->
+
+        <div class="home-text">
+          <h2>
+            <img src="images/HeaderAccent.png" class="header-accent" />
+            ABOUT THE GAME
+            <img src="images/HeaderAccent.png" class="header-accent" />
+          </h2>
+          <div class="about-game">
+            Created by two brothers, <em>Coffee Pot Terrarium</em> is a turn-based game of tact and tile manipulation. Raise new pathways to traverse the map. Drop tiles to eliminate the enemies. Your skills charge each turn so you will need to tactfully decide when to activate them.
+            <br><br>
+            Each level introduces new challenges, enemies, and encounters to overcome. It's part tactical RPG, part puzzle game, with a result that is uniquely its own. Every feature of <em>Coffee Pot Terrarium</em> is being carefully designed, from the art and music to the code and gameplay. It's a true indie game, so if you like it, tell your friends about it!
           </div>
         </div>
+        <div class="home-text">
+          <h2>
+            <img src="images/HeaderAccent.png" class="header-accent" />
+            SCREENSHOTS
+            <img src="images/HeaderAccent.png" class="header-accent" />
+          </h2>
+          <div class="home-cptscreenshots">
+            <img src="images/home/Screenshots.png" />
+          </div>
+        </div>
+        <div class="press-kit home-text">
+          <h2>
+            <img src="images/HeaderAccent.png" class="header-accent" />
+            PRESS KIT
+            <img src="images/HeaderAccent.png" class="header-accent" />
+          </h2>
+          <div class="press-kit-text">
+            Includes trailer, screenshots, and info on <em>Coffee Pot Terrarium</em> and Brothers Flint. Coming soon.
+          </div>
+          <br>
+          <div class="press-kit-text">
+            Thanks for checking out our game! If you'd like to get in touch with us, you can reach us via email at info (at) brothersflint (dot) com or send us a message via social media.
+          </div>
+        </div>
+
+
+
       </div>
 
       <bf-footer></bf-footer>
