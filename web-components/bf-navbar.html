@@ -289,10 +289,10 @@
       <nav class="main-navigation">
         <button class="menu-toggle">MENU</button>
         <ul class="nav-menu">
-          <li class="current-menu-item"><a href="//tobyflint.github.io/">Home</a></li>
-          <li><a href="//blog.brothersflint.com/">Blog</a></li>
-          <li><a href="//tobyflint.github.io/games.html">Games</a></li>
-          <li><a href="//tobyflint.github.io/about.html">About</a></li>
+          <li id="home"><a href="//tobyflint.github.io/">Home</a></li>
+          <li id="blog"><a href="//blog.brothersflint.com/">Blog</a></li>
+          <li id="games"><a href="//tobyflint.github.io/games.html">Games</a></li>
+          <li id="about"><a href="//tobyflint.github.io/about.html">About</a></li>
           <li class="menu-social-buttons">
             <a target="_blank" class="menu-social-button social-button-fb" href="https://www.facebook.com/brothersflintmobileappdev"></a>
             <a target="_blank" class="menu-social-button social-button-twit" href="https://twitter.com/BrothersFlint"></a>
@@ -306,7 +306,13 @@
 
   <script>
     Polymer({
-      is: "bf-navbar"
+      is: "bf-navbar",
+      properties: {
+        currentPage: String
+      },
+      ready: function() {
+        this.toggleClass("current-menu-item", true, this.$$('#' + this.currentPage));
+      }
     });
   </script>
 
