@@ -21,7 +21,7 @@
         border-bottom: 1px solid #ffffff;
       }
 
-      .menu-logo {
+      .navbar-logo {
         position: absolute;
         top: 25px;
         left: 56px;
@@ -33,134 +33,29 @@
         z-index: 20000;
       }
 
-      @media (max-width: 840px) {
-        .menu-logo {
-          left: 20px;
-        }
-      }
-
       .main-navigation {
         clear: both;
         position: relative;
-      }
-
-
-
-
-
-      .menu-toggle:after {
-        -webkit-font-smoothing: antialiased;
-        display: inline-block;
-        font: normal 16px/1 Genericons;
-        vertical-align: text-bottom;
       }
 
       .menu-toggle {
         display: none;
       }
 
-      @media (max-width: 840px) {
-
-        /* Small menu */
-        .menu-toggle {
-          cursor: pointer;
-          display: inline-block;
-          float: right;
-          font-family: OriyaMN, Helvetica, Arial, sans-serif;
-          letter-spacing: 2px;
-          margin: 0;
-        }
-
-        .menu-toggle,
-        .menu-toggle:hover,
-        .menu-toggle:focus,
-        .menu-toggle:active {
-          background: none;
-          border: none;
-          color: white;
-          padding: 27px 20px 27px 20px;
-        }
-
-        .menu-toggle:after {
-          content: "\f502";
-          font-size: 12px;
-          padding-left: 8px;
-          vertical-align: -4px;
-        }
-
-        .toggled-on .menu-toggle:after {
-          content: "\f500";
-          vertical-align: 2px;
-        }
-
-        .toggled-on .nav-menu,
-        .toggled-on .nav-menu > ul {
-          display: block;
-          margin-left: 0;
-          padding: 0;
-          width: 100%;
-        }
-
-        .toggled-on li,
-        .toggled-on .children {
-          display: block;
-        }
-
-        .toggled-on .nav-menu li > ul {
-          background-color: transparent;
-          display: block;
-          float: none;
-          margin-left: 20px;
-          position: relative;
-          left: auto;
-          top: auto;
-        }
-
-        .toggled-on .nav-menu li > ul a {
-          color: #141412;
-          width: auto;
-        }
-
-        .toggled-on .nav-menu li:hover > a,
-        .toggled-on .nav-menu .children a {
-          background-color: transparent;
-          color: #141412;
-        }
-
-        .toggled-on .nav-menu > li a:hover,
-        .toggled-on .nav-menu > ul a:hover {
-          background-color: #fff;
-          color: #222;
-        }
-
-        .toggled-on .nav-menu > li a:focus,
-        .toggled-on .nav-menu > ul a:focus {
-          background-color: #fff;
-          color: #222;
-        }
-
-        ul.nav-menu,
-        div.nav-menu > ul {
-          display: none;
-        }
-
-      }
-
-      ul.nav-menu,
-      div.nav-menu > ul {
+      .menu {
         margin: 0;
         padding: 14px 20px 14px 0;
         float: right;
       }
 
-      .nav-menu li {
+      .menu-item {
         display: inline-block;
         position: relative;
         text-transform: uppercase;
       }
 
-      .nav-menu li a {
-        color: #ffffff;
+      .menu-item a {
+        color: #fff;
         display: block;
         font-size: 12px;
         font-family: OriyaMN, Helvetica, Arial, sans-serif;
@@ -172,66 +67,15 @@
 
       }
 
-      .nav-menu li:hover > a,
-      .nav-menu li a:hover,
-      .nav-menu li:focus > a,
-      .nav-menu li a:focus {
-        /*background-color: #220e10;*/
+      .menu-item:hover a,
+      .menu-item a:hover,
+      .menu-item:focus a,
+      .menu-item a:focus {
         color: #fff;
         font-weight: 900;
       }
 
-      .nav-menu .sub-menu,
-      .nav-menu .children {
-        background-color: #220e10;
-        border: 2px solid #f7f5e7;
-        border-top: 0;
-        padding: 0;
-        position: absolute;
-        left: -2px;
-        z-index: 99999;
-        height: 1px;
-        width: 1px;
-        overflow: hidden;
-        clip: rect(1px, 1px, 1px, 1px);
-      }
-
-      .nav-menu .sub-menu ul,
-      .nav-menu .children ul {
-        border-left: 0;
-        left: 100%;
-        top: 0;
-      }
-
-      ul.nav-menu ul a,
-      .nav-menu ul ul a {
-        color: #fff;
-        margin: 0;
-        width: 200px;
-      }
-
-      ul.nav-menu ul a:hover,
-      .nav-menu ul ul a:hover,
-      ul.nav-menu ul a:focus,
-      .nav-menu ul ul a:focus {
-        background-color: #db572f;
-      }
-
-      ul.nav-menu li:hover > ul,
-      .nav-menu ul li:hover > ul,
-      ul.nav-menu .focus > ul,
-      .nav-menu .focus > ul {
-        clip: inherit;
-        overflow: inherit;
-        height: inherit;
-        width: inherit;
-      }
-
-
-
-
-
-      .nav-menu .current-menu-item > a {
+      .current-menu-item a {
         color: white;
         font-weight: bold;
       }
@@ -242,19 +86,6 @@
         padding-left: 40px;
         padding-right: 20px;
         text-align: center;
-      }
-
-      @media (max-width: 880px) {
-        .menu-social-buttons {
-          padding-left: 0;
-        }
-      }
-
-      @media (max-width: 840px) {
-        .menu-social-buttons {
-          padding-top: 10px;
-          padding-bottom: 10px;
-        }
       }
 
       a.menu-social-button {
@@ -281,19 +112,107 @@
       .social-button-yt {
         background-image: url(../images/socials/youTubeButton.png);
       }
+
+      @media (max-width: 880px) {
+        .menu-social-buttons {
+          padding-left: 0;
+        }
+      }
+
+      /* Mobile menu */
+      @media (max-width: 840px) {
+
+        .navbar-logo {
+          left: 20px;
+        }
+
+        .menu-toggle:checked + .menu {
+          display: block;
+        }
+
+        .menu-toggle:not(:checked) + .menu {
+          display: none;
+        }
+
+        .menu-toggle {
+          cursor: pointer;
+          display: inline-block;
+          float: right;
+          font-family: OriyaMN, Helvetica, Arial, sans-serif;
+          letter-spacing: 2px;
+          margin: 0;
+        }
+
+        .menu-toggle,
+        .menu-toggle:hover,
+        .menu-toggle:focus,
+        .menu-toggle:active {
+          background: none;
+          border: none;
+          color: white;
+          padding: 27px 20px 27px 20px;
+        }
+
+        /*
+        .menu-toggle:after {
+          content: "\f502";
+          font-size: 12px;
+          padding-left: 8px;
+          vertical-align: -4px;
+        }
+
+        .menu-toggle:after {
+          content: "\f500";
+          vertical-align: 2px;
+        }
+        */
+
+        .menu {
+          display: block;
+          margin-left: 0;
+          padding: 0;
+          width: 100%;
+        }
+
+        .menu-item {
+          display: block;
+        }
+
+        .menu-item:hover a {
+          background-color: transparent;
+          color: #141412;
+        }
+
+        .menu-item a:hover {
+          background-color: #fff;
+          color: #222;
+        }
+
+        .menu-item a:focus {
+          background-color: #fff;
+          color: #222;
+        }
+
+        .menu-social-buttons {
+          padding-top: 10px;
+          padding-bottom: 10px;
+        }
+
+      }
     </style>
 
     <div class="site-header-buffer"></div>
     <header class="site-header">
-      <a href="//tobyflint.github.io/" class="menu-logo"></a>
+      <a href="//tobyflint.github.io/" class="navbar-logo"></a>
       <nav class="main-navigation">
-        <button class="menu-toggle">MENU</button>
-        <ul class="nav-menu">
-          <li id="home"><a href="//tobyflint.github.io/">Home</a></li>
-          <li id="blog"><a href="//blog.brothersflint.com/">Blog</a></li>
-          <li id="games"><a href="//tobyflint.github.io/games">Games</a></li>
-          <li id="about"><a href="//tobyflint.github.io/about">About</a></li>
-          <li class="menu-social-buttons">
+        <input type='checkbox' class="menu-toggle">
+        <!-- <button class="menu-toggle">MENU</button> -->
+        <ul class="menu">
+          <li id="home" class="menu-item"><a href="//tobyflint.github.io/">Home</a></li>
+          <li id="blog" class="menu-item"><a href="//blog.brothersflint.com/">Blog</a></li>
+          <li id="games" class="menu-item"><a href="//tobyflint.github.io/games">Games</a></li>
+          <li id="about" class="menu-item"><a href="//tobyflint.github.io/about">About</a></li>
+          <li class="menu-item menu-social-buttons">
             <a target="_blank" class="menu-social-button social-button-fb" href="https://www.facebook.com/brothersflintmobileappdev"></a>
             <a target="_blank" class="menu-social-button social-button-twit" href="https://twitter.com/BrothersFlint"></a>
             <a target="_blank" class="menu-social-button social-button-yt" href="https://www.youtube.com/channel/UCqE1nImG1kXj7OqURME1sJg"></a>
