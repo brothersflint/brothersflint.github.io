@@ -7,7 +7,7 @@
 
     <style>
       .site-header-buffer {
-        height: 70px;
+        height: 71px;
         background-color: rgb(22, 22, 22);
       }
 
@@ -17,8 +17,8 @@
         left: 0;
         right: 0;
         min-height: 70px;
-        background-color: rgb(22, 22, 22);
         border-bottom: 1px solid #fff;
+        background-color: rgb(22, 22, 22);
         z-index: 10;
       }
 
@@ -26,6 +26,7 @@
         display: inline-block;
         margin-top: 25px;
         margin-left: 56px;
+        margin-bottom: 15px;
         width: 200px;
         float: left;
       }
@@ -94,7 +95,7 @@
         text-align: center;
       }
 
-      a.menu-social-button {
+      .menu-social-button {
         height: 30px;
         width: 30px;
         margin: 5px !important;
@@ -103,7 +104,7 @@
         vertical-align: middle;
       }
 
-      a.menu-social-button:hover {
+      .menu-social-button:hover {
         background-position: -30px 0;
       }
 
@@ -149,10 +150,11 @@
           cursor: pointer;
           display: inline-block;
           float: right;
-          margin: 20px;
+          margin-top: 25px;
+          margin-right: 20px;
           height: 20px;
-          width: 20px;
-          background-color: red;
+          width: 38px;
+          background-image: url(../images/HeaderAccent.png);
         }
 
         .menu {
@@ -172,14 +174,14 @@
           color: #141412;
         }
 
-        .menu-item a:hover {
+        .menu-item a:hover,
+        .menu-item a:focus {
           background-color: #fff;
           color: #222;
         }
 
-        .menu-item a:focus {
-          background-color: #fff;
-          color: #222;
+        .menu-social-buttons a:hover {
+          background-color: transparent;
         }
 
         .menu-social-buttons {
