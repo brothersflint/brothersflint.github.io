@@ -16,29 +16,35 @@
         top: 0;
         left: 0;
         right: 0;
-        z-index: 10000;
-        background-color: rgb(22, 22, 22); /* TF Black */
-        border-bottom: 1px solid #ffffff;
+        min-height: 70px;
+        background-color: rgb(22, 22, 22);
+        border-bottom: 1px solid #fff;
+        z-index: 10;
       }
 
       .navbar-logo {
-        position: absolute;
-        top: 25px;
-        left: 56px;
+        display: inline-block;
+        margin-top: 25px;
+        margin-left: 56px;
         width: 200px;
-        height: 20px;
-        background-image: url(../images/BFLogo.png);
-        background-size: contain;
-        background-repeat: no-repeat;
-        z-index: 20000;
+        float: left;
+      }
+
+      .navbar-logo > img {
+        width: 100%;
       }
 
       .main-navigation {
-        clear: both;
-        position: relative;
+        display: inline-block;
+        float: right;
       }
 
       .menu-toggle {
+        display: none;
+        float: right;
+      }
+
+      .menu-toggle-image {
         display: none;
       }
 
@@ -113,65 +119,48 @@
         background-image: url(../images/socials/youTubeButton.png);
       }
 
-      @media (max-width: 880px) {
+      @media (max-width: 940px) {
         .menu-social-buttons {
           padding-left: 0;
         }
       }
 
       /* Mobile menu */
-      @media (max-width: 840px) {
+      @media (max-width: 850px) {
 
         .navbar-logo {
-          left: 20px;
+          display: block;
+          margin-left: 20px;
         }
 
-        .menu-toggle:checked + .menu {
+        .main-navigation {
+          width: 100%;
+        }
+
+        .menu-toggle:checked + label + nav {
           display: block;
         }
 
-        .menu-toggle:not(:checked) + .menu {
+        .menu-toggle:not(:checked) + label + nav {
           display: none;
         }
 
-        .menu-toggle {
+        .menu-toggle-image {
           cursor: pointer;
           display: inline-block;
           float: right;
-          font-family: OriyaMN, Helvetica, Arial, sans-serif;
-          letter-spacing: 2px;
-          margin: 0;
+          margin: 20px;
+          height: 20px;
+          width: 20px;
+          background-color: red;
         }
-
-        .menu-toggle,
-        .menu-toggle:hover,
-        .menu-toggle:focus,
-        .menu-toggle:active {
-          background: none;
-          border: none;
-          color: white;
-          padding: 27px 20px 27px 20px;
-        }
-
-        /*
-        .menu-toggle:after {
-          content: "\f502";
-          font-size: 12px;
-          padding-left: 8px;
-          vertical-align: -4px;
-        }
-
-        .menu-toggle:after {
-          content: "\f500";
-          vertical-align: 2px;
-        }
-        */
 
         .menu {
           display: block;
           margin-left: 0;
           padding: 0;
           width: 100%;
+          float: none;
         }
 
         .menu-item {
@@ -203,10 +192,10 @@
 
     <div class="site-header-buffer"></div>
     <header class="site-header">
-      <a href="//tobyflint.github.io/" class="navbar-logo"></a>
+      <a href="//tobyflint.github.io/" class="navbar-logo"><img src="../images/BFLogo.png" alt="Brothers Flint"></a>
+      <input type="checkbox" class="menu-toggle" id="menuToggle">
+      <label for="menuToggle" class="menu-toggle-image"></label>
       <nav class="main-navigation">
-        <input type='checkbox' class="menu-toggle">
-        <!-- <button class="menu-toggle">MENU</button> -->
         <ul class="menu">
           <li id="home" class="menu-item"><a href="//tobyflint.github.io/">Home</a></li>
           <li id="blog" class="menu-item"><a href="//blog.brothersflint.com/">Blog</a></li>
