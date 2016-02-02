@@ -1,0 +1,203 @@
+.site-header-buffer {
+  height: 71px;
+  background-color: rgb(22, 22, 22);
+}
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  min-height: 70px;
+  border-bottom: 1px solid #fff;
+  background-color: rgb(22, 22, 22);
+  z-index: 10;
+}
+
+.navbar-logo {
+  display: inline-block;
+  margin-top: 25px;
+  margin-left: 56px;
+  margin-bottom: 15px;
+  width: 200px;
+  float: left;
+}
+
+.navbar-logo > img {
+  width: 100%;
+}
+
+.main-navigation {
+  display: inline-block;
+  float: right;
+}
+
+.menu-toggle {
+  display: none;
+  float: right;
+}
+
+.menu-toggle-image {
+  display: none;
+}
+
+.menu {
+  margin: 0;
+  padding: 14px 20px 14px 0;
+  float: right;
+}
+
+.menu-item {
+  display: inline-block;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.menu-item a {
+  color: #fff;
+  display: block;
+  font-size: 12px;
+  font-family: OriyaMN, Helvetica, Arial, sans-serif;
+  line-height: 1;
+  letter-spacing: 0.4em;
+  padding: 15px 20px;
+  text-decoration: none;
+  font-weight: 100;
+
+}
+
+.menu-item:hover a,
+.menu-item a:hover,
+.menu-item:focus a,
+.menu-item a:focus {
+  color: #fff;
+  font-weight: 900;
+}
+
+.current-menu-item a {
+  color: white;
+  font-weight: bold;
+}
+
+.menu-social-buttons {
+  margin: 0;
+  padding: 0;
+  padding-left: 40px;
+  padding-right: 20px;
+  text-align: center;
+}
+
+.menu-social-button {
+  height: 30px;
+  width: 30px;
+  margin: 5px !important;
+  padding: 0 !important;
+  display: inline-block !important;
+  vertical-align: middle;
+}
+
+.menu-social-button:hover {
+  background-position: -30px 0;
+}
+
+.social-button-fb {
+  background-image: url(../images/socials/facebookButton.png);
+}
+
+.social-button-twit {
+  background-image: url(../images/socials/twitterButton.png);
+}
+
+.social-button-yt {
+  background-image: url(../images/socials/youTubeButton.png);
+}
+
+@media (max-width: 940px) {
+  .menu-social-buttons {
+    padding-left: 0;
+  }
+}
+
+/* Mobile menu */
+@media (max-width: 850px) {
+
+  .navbar-logo {
+    display: block;
+    margin-left: 20px;
+  }
+
+  .main-navigation {
+    width: 100%;
+  }
+
+  .menu-toggle:checked + label + nav {
+    display: block;
+  }
+
+  .menu-toggle:not(:checked) + label + nav {
+    display: none;
+  }
+
+  .menu-toggle-image {
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    margin-top: 25px;
+    margin-right: 20px;
+    height: 20px;
+    width: 38px;
+    background-image: url(../images/HeaderAccent.png);
+  }
+
+  .menu {
+    display: block;
+    margin-left: 0;
+    padding: 0;
+    width: 100%;
+    float: none;
+  }
+
+  .menu-item {
+    display: block;
+  }
+
+  .menu-item:hover a {
+    background-color: transparent;
+    color: #141412;
+  }
+
+  .menu-item a:hover,
+  .menu-item a:focus {
+    background-color: #fff;
+    color: #222;
+  }
+
+  .menu-social-buttons a:hover {
+    background-color: transparent;
+  }
+
+  .menu-social-buttons {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+}
+.site-footer {
+  background-color: rgb(22, 22, 22);
+  border-top: 1px solid #ffffff;
+  color: white;
+  font-family: OriyaMN, Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  text-align: center;
+}
+
+.site-info {
+  padding: 40px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.copyright {
+  padding-top: 5px;
+  font-size: 10px;
+}
