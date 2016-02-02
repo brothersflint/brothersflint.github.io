@@ -1,0 +1,9 @@
+NOTES:
+This website is currently served on github pages.
+It is desired to keep the site as static as possible to ease maintenance and avoid unnecessary complexity.
+A certain level of modularity is desired as time evolves.
+In particular, the navbar and footer need to have a certain amount of modularity for ease of inclusion in external portions of the Brothers Flint website, such as blog, store, etc.
+This was originally intended to be implemented via Web Components (Polymer), but performance outside of Chrome was less than desirable.
+Partial files, such as navbarfooter.css, are served to external sites that do not need the entire site's stylesheet.
+The site is currently built locally via mustache with the (exceedingly beautiful :P) build.sh script.
+This was all done very quick and dirty, officializing with Grunt/Bower/Minifiers/NPM is all desirable stuff as time permits.
