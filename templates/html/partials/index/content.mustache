@@ -6,20 +6,24 @@
 </div>
 <div class="primary-video">
   <iframe id="youtubeVideo" width="10" height="10" src="https://www.youtube.com/embed/jpUUJShUtAc?rel=0" frameborder="2" allowfullscreen></iframe>
-  <script type="text/javascript">
-    window.onload = resizeYouTubeVideo;
-    window.onresize = resizeYouTubeVideo;
-    function resizeYouTubeVideo() {
-      var ytVid = document.getElementById('youtubeVideo');
-      ytVid.width = Math.min(window.innerWidth * 0.8, 800);
-      ytVid.height = ytVid.width * (9.0 / 16.0);
-    }
-  </script>
 </div>
 
 <div class="steam-widget">
-  <iframe src="http://steamcommunity.com/sharedfiles/widget/556625074" width="336" height="137" frameborder="0" scrolling="no"></iframe>
+  <iframe id="steamWidget" src="http://store.steampowered.com/widget/444020/" width="10" height="10" frameborder="0" scrolling="no"></iframe>
 </div>
+
+<script type="text/javascript">
+  window.onload = resizeIFrames;
+  window.onresize = resizeIFrames;
+  function resizeIFrames() {
+    var ytVid = document.getElementById('youtubeVideo');
+    var widget = document.getElementById('steamWidget');
+    ytVid.width = widget.width = Math.min(window.innerWidth * 0.8, 800);
+    ytVid.height = ytVid.width * (9.0 / 16.0)
+    widget.height = 190;
+  }
+  resizeIFrames();
+</script>
 <!-- <div class="download-buttons-home">
   <a target="_blank" href="https://itunes.apple.com/nz/app/up-away/id909800185?mt=8" class="download-button button-steam button-steam-rollover"></a>
   <a target="_blank" href="https://itunes.apple.com/nz/app/up-away/id909800185?mt=8" class="download-button button-app-store button-rollover"></a>
