@@ -18,9 +18,14 @@
   function resizeIFrames() {
     var ytVid = document.getElementById('youtubeVideo');
     var widget = document.getElementById('steamWidget');
-    ytVid.width = widget.width = Math.min(window.innerWidth * 0.8, 800);
-    ytVid.height = ytVid.width * (9.0 / 16.0)
+    ytVid.width = Math.min(window.innerWidth * 0.8, 800);
+    ytVid.height = ytVid.width * (9.0 / 16.0);
+
+    widget.width = Math.min(window.innerWidth * 1.0, 600);
     widget.height = 190;
+    if(window.innerWidth <= 580) {
+      widget.width = window.innerWidth * 2;
+    }
   }
   resizeIFrames();
 </script>
