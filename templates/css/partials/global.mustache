@@ -147,13 +147,32 @@ h6 {
   overflow: hidden;
 }
 
+.humble-widget {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
 @media (max-width: 580px) {
   .steam-widget {
-    margin-bottom: 0;
     margin-top: 0;
+    margin-bottom: 0;
   }
 
   #steamWidget {
+    -webkit-transform-origin: left;
+    transform-origin: left;
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+
+  .humble-widget {
+    margin-top: -100px;
+    margin-bottom: -60px;
+  }
+
+  #humbleWidget {
     -webkit-transform-origin: left;
     transform-origin: left;
     -webkit-transform: scale(0.5);
