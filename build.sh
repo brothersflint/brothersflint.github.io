@@ -1,4 +1,10 @@
 #!/bin/sh
+
+# Global packages:
+# mustache@2.2.1
+# clean-css@3.4.13
+# html-minifier@1.1.1
+
 mustache \
   -p templates/css/partials/navbar.mustache \
   -p templates/css/partials/footer.mustache \
