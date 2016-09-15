@@ -34,6 +34,15 @@ html-minifier -o index.html index.html --remove-comments --collapse-whitespace
 mustache \
   -p templates/html/partials/navbar.mustache \
   -p templates/html/partials/footer.mustache \
+  -p templates/html/partials/tinyarmies/content.mustache \
+  templates/data/tinyarmies.json templates/html/page.mustache \
+  > tinyarmies.html
+
+html-minifier -o tinyarmies.html tinyarmies.html --remove-comments --collapse-whitespace
+
+mustache \
+  -p templates/html/partials/navbar.mustache \
+  -p templates/html/partials/footer.mustache \
   -p templates/html/partials/games/content.mustache \
   templates/data/games.json templates/html/page.mustache \
   > games.html
