@@ -57,3 +57,12 @@ mustache \
   > about.html
 
 html-minifier -o about.html about.html --remove-comments --collapse-whitespace
+
+mustache \
+  -p templates/html/partials/navbar.mustache \
+  -p templates/html/partials/footer.mustache \
+  -p templates/html/partials/privacypolicy/content.mustache \
+  templates/data/privacypolicy.json templates/html/page.mustache \
+  > privacypolicy.html
+
+html-minifier -o privacypolicy.html privacypolicy.html --remove-comments --collapse-whitespace
